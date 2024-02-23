@@ -9,12 +9,12 @@ let graph = "example-graph";
 let openAiKey = process.env.OPEN_API_KEY;
 
 // Create a dataset provider
-const datasetOptions = {
-  save: true,
-  filePath: project,
-};
+//const datasetOptions = {
+//  save: true,
+//  filePath: project,
+//};
 
-const datasetProvider = await NodeDatasetProvider.fromProjectFile(project, datasetOptions);
+//const datasetProvider = await NodeDatasetProvider.fromProjectFile(project, datasetOptions);
 
 let result = await runGraphInFile(project, {
     graph: graph,
@@ -26,7 +26,7 @@ let result = await runGraphInFile(project, {
     externalFunctions: {},
     onUserEvent: {},
     openAiKey: openAiKey,
-    datasetProvider: datasetProvider
+    //datasetProvider: datasetProvider
   } as RunGraphOptions);
 
 // Return graph output of the run
